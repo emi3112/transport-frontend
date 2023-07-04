@@ -14,7 +14,7 @@ function Home() {
   const [ names, setNames ] = useState() 
   // FETCH DES NOMS DES CLIENTS POUR ENVOIE/EXPEDITION
   useEffect(() => {
-    fetch('http://localhost:3000/client').then((response) => response.json()).then(data => {
+    fetch('https://transport-backend-tawny.vercel.app/client').then((response) => response.json()).then(data => {
       setNames(data.names)
     })
   }, []);
@@ -66,7 +66,7 @@ function Home() {
   const handleSave = () => {
     console.log('click save / post')
     if(destinataireValue && expediteurValue && whoPayed && numberColis && poids) {
-      fetch('http://localhost:3000/tarifAndTaxe',
+      fetch('https://transport-backend-tawny.vercel.app/tarifAndTaxe',
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -139,7 +139,7 @@ function Home() {
   const handleCommand = () => {
     router.push('/validation')
     if(destinataireValue && expediteurValue && whoPayed && numberColis && poids && tarif && taxe && total) {
-      fetch('http://localhost:3000/newTransport',
+      fetch('https://transport-backend-tawny.vercel.app/newTransport',
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
