@@ -10,11 +10,12 @@ import { QuestionCircleOutlined } from '@ant-design/icons';
 function Home() {
 
   const router = useRouter()
+  const url = 'transport-backend-rho.vercel.app'
 
   const [ names, setNames ] = useState() 
   // FETCH DES NOMS DES CLIENTS POUR ENVOIE/EXPEDITION
   useEffect(() => {
-    fetch('https://transport-backend-tawny.vercel.app/client').then((response) => response.json()).then(data => {
+    fetch(`${url}client`).then((response) => response.json()).then(data => {
       setNames(data.names)
     })
   }, []);
@@ -66,7 +67,7 @@ function Home() {
   const handleSave = () => {
     console.log('click save / post')
     if(destinataireValue && expediteurValue && whoPayed && numberColis && poids) {
-      fetch('https://transport-backend-tawny.vercel.app/tarifAndTaxe',
+      fetch(`${url}tarifAndTaxe`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -139,7 +140,7 @@ function Home() {
   const handleCommand = () => {
     router.push('/validation')
     if(destinataireValue && expediteurValue && whoPayed && numberColis && poids && tarif && taxe && total) {
-      fetch('https://transport-backend-tawny.vercel.app/newTransport',
+      fetch(`${url}newTransport`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
