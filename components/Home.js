@@ -10,7 +10,7 @@ import { QuestionCircleOutlined } from '@ant-design/icons';
 function Home() {
 
   const router = useRouter()
-  const url = transport-backend-rho.vercel.app
+  const url = 'https://transport-backend-rho.vercel.app/'
 
   const [ names, setNames ] = useState() 
   // FETCH DES NOMS DES CLIENTS POUR ENVOIE/EXPEDITION
