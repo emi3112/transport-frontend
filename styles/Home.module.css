@@ -1,0 +1,173 @@
+.pageContainer {
+  background-image: url('../public/backgroud.jpg');
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+  width: 100%;
+  height: 100vh;
+}
+
+/* -------------------------------------------------------------HEADER-------------------------------------------------------------- */
+.headerContainer {
+  display: flex;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 21;
+  flex-direction: column;
+  /* background-color: #E8EEFD ; */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.titlePage {
+  font-size: 50px;
+  color: #7A60B1;
+  font-weight: bold;
+}
+
+/* ------------------------------------------------------------- ENREGISTREMENT DES INFORMATIONS-------------------------------------------------------------- */
+
+.saveContainer {
+  display: flex;
+  grid-row-start: 4;
+  grid-row-end: 20;
+  grid-column-start: 4;
+  grid-column-end: 9;
+  flex-direction: column;
+  background-color: #E8EEFD ;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.52); 
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.52);
+  padding: 20px;
+}
+
+.saveTitleContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.saveTitle {
+  color: #7A60B1;
+}
+
+.expedition {
+  margin-bottom: 10px;
+}
+
+.destinataire {
+  margin-bottom: 20px;
+
+}
+
+.whopayed {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 30px;
+  /* justify-content: ; */
+  /* align-items: center; */
+}
+
+.numberContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.poids {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* margin-right: 5px; */
+}
+
+.colisNb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 5px;
+}
+
+.suivantButton {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #7A60B1;
+}
+/* ------------------------------------------------------------- TOTAL -------------------------------------------------------------- */
+
+.totalContainer {
+  display: flex;
+  grid-row-start: 4;
+  grid-row-end: 20;
+  grid-column-start: 13;
+  grid-column-end: 18;
+  flex-direction: column;
+  background-color: #E8EEFD ;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.52); 
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.52);
+  padding: 20px;
+}
+
+.totalTitleContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.totalTitle {
+  color: #7A60B1;
+}
+/* .popover {
+  width: 20px;
+}
+
+.statistics {
+
+} */
+
+.tarif {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+  margin-bottom: 40px;
+}
+
+.taxes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+  margin-bottom: 80px;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+  margin-bottom: 65px;
+}
